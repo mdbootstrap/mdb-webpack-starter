@@ -40,8 +40,7 @@ npm run build
 │   └── webpack.config.prod.js
 └── dist/
 ```
-<br><br><br>
-
+<br><br>
 
 ## MDB UI KIT
 
@@ -65,7 +64,7 @@ To import MDB stylesheet please use the following syntax:
 You can also import individual SCSS modules. To do it properly, we recommend to copy them from the node_modules/mdb-ui-kit/src/scss location directly to your project and import in the same way as CSS files.
 <br>
 
-### Support MDB developers
+#### Support MDB developers
 - Star our GitHub repo
 - Create pull requests, submit bugs, suggest new features or documentation updates
 - Follow us on [Twitter](https://twitter.com/mdbootstrap)
