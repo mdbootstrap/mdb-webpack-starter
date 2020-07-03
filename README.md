@@ -1,23 +1,23 @@
 ![MDB Logo](https://mdbootstrap.com/img/Marketing/general/logo/medium/mdb-r.png)
 
-# MDB WEBPACK STARTER
+# MDB Webpack Starter
 
-### Installation
+#### Installation
 ```
 npm install
 ```
 
-### Dev Server
+#### Dev Server
 ```
 npm start
 ```
 
-### Build
+#### Build
 ```
 npm run build
 ```
 
-### Features:
+#### Features:
 
 * Bundling via [webpack](https://github.com/webpack/webpack)
 * ES6+ Support via [babel](https://babeljs.io/)
@@ -26,7 +26,7 @@ npm run build
 * Unit Testing via [jest](https://github.com/facebook/jest)
 * Code Formatting via [prettier](https://github.com/prettier/prettier)
 
-### Files structure:
+#### Files structure:
 
 ```
 ├── src
@@ -41,6 +41,8 @@ npm run build
 └── dist/
 ```
 
+
+
 ## MDB UI KIT
 
 #### Importing JS modules
@@ -51,11 +53,13 @@ import { Input } from 'mdb-ui-kit'; // module
 import { Input as CustomInput } from 'mdb-ui-kit'; // module with custom name
 ```
 
+
 #### Importing CSS file
 To import MDB stylesheet please use the following syntax:
 ```
 @import '~mdb-ui-kit/css/mdb.min.css';
 ```
+
 
 #### Importing SCSS modules
 You can also import individual SCSS modules. To do it properly, we recommend to copy them from the node_modules/mdb-ui-kit/src/scss location directly to your project and import in the same way as CSS files.
