@@ -79,6 +79,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "mdb-ui-kit": "2.0.0"
+    "mdb-ui-kit": "2.2.1"
   }
 }
