@@ -72,6 +72,57 @@ To import MDB stylesheet please use the following syntax:
 ```
 @import '~mdb-ui-kit/css/mdb.min.css';
 ```
+<br><br>
 
-### Importing SCSS modules
-You can also import individual SCSS modules. To do it properly, we recommend to copy them from the node_modules/mdb-ui-kit/src/scss location directly to your project and import in the same way as CSS files.
+___
+
+# CUSTOM VERSION OF MDB UI KIT
+It is possible to prepare a custom version of MDB UI KIT. It can be useful when the project uses only several modules of our library and you want to reduce the size of the compiled files. To achieve this, follow the steps:
+
+```
+npm install
+```
+
+```
+npm run getMDBsrc
+```
+
+### Importing JS components
+Copy the content from mdb/js/mdb.free.js or mdb/js/mdb.pro.js to src/js/index.js file. Pick only the components you need and update path to the mdb dir. Here's an example:
+
+```
+import Carousel from '../../mdb/js/free/carousel';
+export { Carousel };
+```
+
+### Importing SCSS files
+Same as with js files, copy the content from mdb/scss/mdb.free.scss or mdb/scss/mdb.pro.scss to src/scss/index.scss. Remove the lines with the import of modules that you will not use and update the paths to point the mdb dir.
+
+### Updating index.html
+Add your own content inside index.html file. Keep in mind that you will also need to update js and css file names:
+
+From:
+```
+<link rel="stylesheet" href="css/index.min.css" />
+```
+```
+<script type="text/javascript" src="js/index.min.js"></script>
+```
+
+To:
+```
+<link rel="stylesheet" href="css/mdb.min.css" />
+```
+```
+<script type="text/javascript" src="js/mdb.min.js"></script>
+```
+
+### Dev Server
+```
+npm run startMDB
+```
+
+### Build
+```
+npm run buildMDB
+```
