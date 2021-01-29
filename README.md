@@ -176,13 +176,15 @@ Webpack Starter allows pro users to prepare a personalized theme for all UI KIT 
 npm install
 ```
 
-```
-npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
-```
-or 
-```
-npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
-```
+> **Pro Essential installation**
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+> ```
+
+> **Pro Advanced installation**
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+> ```
 
 ### SCSS config
 Creating a new theme requires that you define primary and secondary colors for your application. We prepared functions and mixins that will help you to create a ready to use theme using these colors. Here's an example code:
