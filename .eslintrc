@@ -8,7 +8,13 @@
     "jasmine": true,
     "amd": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "ignorePatterns": [
+    "mdb"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module"
@@ -28,7 +34,10 @@
     "consistent-return": "error",
     "curly": "error",
     "default-case": "error",
-    "dot-location": ["error", "property"],
+    "dot-location": [
+      "error",
+      "property"
+    ],
     "dot-notation": "error",
     "eqeqeq": "error",
     "guard-for-in": "error",
@@ -148,7 +157,10 @@
     "line-comment-position": "off",
     "lines-around-comment": "off",
     "lines-around-directive": "error",
-    "max-depth": ["error", 10],
+    "max-depth": [
+      "error",
+      10
+    ],
     "max-len": "off",
     "max-lines": "off",
     "max-nested-callbacks": "error",
@@ -198,17 +210,31 @@
         "multiline": true
       }
     ],
-    "object-curly-spacing": ["error", "always"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "object-property-newline": "error",
-    "one-var": ["error", "never"],
+    "one-var": [
+      "error",
+      "never"
+    ],
     "one-var-declaration-per-line": "error",
     "operator-assignment": "error",
     "operator-linebreak": "off",
     "padded-blocks": "off",
-    "quote-props": ["error", "as-needed"],
-    "quotes": ["error", "single"],
+    "quote-props": [
+      "error",
+      "as-needed"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "require-jsdoc": "off",
-    "semi": ["off"],
+    "semi": [
+      "off"
+    ],
     "semi-spacing": "error",
     "sort-keys": "off",
     "sort-vars": "error",

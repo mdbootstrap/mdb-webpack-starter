@@ -16,7 +16,7 @@ module.exports = merge(common, {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: Path.resolve(__dirname, '../src/index.html'),
+      template: Path.resolve(__dirname, '../../src/mdb/index.html'),
       inject: false,
     }),
   ],
@@ -24,7 +24,10 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.js$/,
-        include: Path.resolve(__dirname, '../src'),
+        include: [
+          Path.resolve(__dirname, '../../src'),
+          Path.resolve(__dirname, '../../mdb')
+        ],
         enforce: 'pre',
         loader: 'eslint-loader',
         options: {
@@ -33,7 +36,10 @@ module.exports = merge(common, {
       },
       {
         test: /\.js$/,
-        include: Path.resolve(__dirname, '../src'),
+        include: [
+          Path.resolve(__dirname, '../../src'),
+          Path.resolve(__dirname, '../../mdb')
+        ],
         loader: 'babel-loader',
       },
     ],

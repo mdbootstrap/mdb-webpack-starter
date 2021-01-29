@@ -15,10 +15,37 @@
 
 ___
 
+<div class="panel panel-warning">
+**Warning**
+{: .panel-heading}
+<div class="panel-body">
+
+The use of this Starter is at your own risk and assumes basic knowledge of Webpack, JavaScript and CSS preprocessors. We recommend creating custom versions of MDB UI KIT and themes only for advanced developers.
+
+</div>
+</div>
+
+___
+
 ### Installation
 ```
 npm install
 ```
+
+<div class="panel panel-info">
+**Pro Essential / Pro Advanced installation**
+{: .panel-heading}
+<div class="panel-body">
+
+```
+npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+```
+or 
+```
+npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+```
+</div>
+</div>
 
 ### Dev Server
 ```
@@ -42,15 +69,21 @@ npm run build
 ### Files structure:
 
 ```
+.
 ├── src
 │   ├── img/
 │   ├── js/
 │   ├── scss/
+│   ├── mdb/
 │   └── index.html
 ├── webpack
 │   ├── webpack.common.js
 │   ├── webpack.config.dev.js
-│   └── webpack.config.prod.js
+│   ├── webpack.config.prod.js
+│   └── mdb/
+│       ├── webpack.common.mdb.js
+│       ├── webpack.config.mdb.dev.js
+│       └── webpack.config.mdb.prod.js
 └── dist/
 ```
 <br><br>
@@ -83,6 +116,22 @@ It is possible to prepare a custom version of MDB UI KIT. It can be useful when 
 npm install
 ```
 
+<div class="panel panel-info">
+**Pro Essential / Pro Advanced installation**
+{: .panel-heading}
+<div class="panel-body">
+
+```
+npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+```
+or 
+```
+npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+```
+
+</div>
+</div>
+
 ```
 npm run getMDBsrc
 ```
@@ -92,30 +141,50 @@ Copy the content from mdb/js/mdb.free.js or mdb/js/mdb.pro.js to src/js/index.js
 
 ```
 import Carousel from '../../mdb/js/free/carousel';
+
 export { Carousel };
 ```
+
+<div class="panel panel-info">
+**Pro Advanced paths**
+{: .panel-heading}
+<div class="panel-body">
+
+For the Pro Advanced package the __/mdb__ folder will contain two subfolders: __/mdb__ and __/plugins__, so for our needs the paths to the scss and js files will have to contain duplicated __mdb/__ text. Here's an example for a carousel component: 
+
+```
+import Carousel from '../../mdb/mdb/js/free/carousel'.
+```
+</div>
+</div>
+
+Some components may require additional dependencies to be installed. Webpack should report this after starting a devServer.
 
 ### Importing SCSS files
 Same as with js files, copy the content from mdb/scss/mdb.free.scss or mdb/scss/mdb.pro.scss to src/scss/index.scss. Remove the lines with the import of modules that you will not use and update the paths to point the mdb dir.
 
-### Updating index.html
-Add your own content inside index.html file. Keep in mind that you will also need to update js and css file names:
+Keep in mind that many scss files are related to each other. For example, a modal will need files for buttons, ripple, modal, close and transtions to work properly. We recommend that you only delete the files described by comments __BOOTSTRAP COMPONENTS__ and __MDB COMPONENTS__.
 
-From:
+Example path for carousel file:
 ```
-<link rel="stylesheet" href="css/index.min.css" />
-```
-```
-<script type="text/javascript" src="js/index.min.js"></script>
+(...)
+@import '../../mdb/scss/free/carousel';
 ```
 
-To:
+<div class="panel panel-info">
+**Pro Advanced paths**
+{: .panel-heading}
+<div class="panel-body">
+
 ```
-<link rel="stylesheet" href="css/mdb.min.css" />
+(...)
+@import '../../mdb/mdb/scss/free/carousel';
 ```
-```
-<script type="text/javascript" src="js/mdb.min.js"></script>
-```
+</div>
+</div>
+
+### Configuration
+Webpack config for MDB development is located in /webpack/mdb/ directory and index.html file is placed in /src/mdb/ directory.
 
 ### Dev Server
 ```
@@ -125,4 +194,34 @@ npm run startMDB
 ### Build
 ```
 npm run buildMDB
+```
+<br><br>
+
+___
+
+# CUSTOM SKIN
+Webpack Starter allows pro users to prepare a personalized theme for all UI KIT components. 
+
+### Installation
+```
+npm install
+```
+
+```
+npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+```
+
+### SCSS config
+Creating a new theme requires that you define primary and secondary colors for your application. We prepared functions and mixins that will help you to create a ready to use theme using these colors. Here's an example code:
+
+```
+@import '~mdb-ui-kit/src/scss/mdb.pro.scss';
+
+$my-theme-primary: #9c27b0; // theme primary color, change this value to customize theme
+$my-theme-secondary: #69f0ae; // theme secondary color, change this value to customize theme
+
+$my-theme: mdb-light-theme($my-theme-primary, $my-theme-secondary); // create the new theme using primary and secondary colors
+
+// include theme styles
+@include mdb-theme($my-theme);
 ```

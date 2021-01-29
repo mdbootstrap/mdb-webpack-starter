@@ -1,29 +1,25 @@
 const Path = require('path');
-const Webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    'js/mdb': Path.resolve(__dirname, '../src/js/index.js'),
-    'css/mdb': Path.resolve(__dirname, '../src/scss/index.scss'),
+    'js/mdb': Path.resolve(__dirname, '../../src/js/index.js'),
+    'css/mdb': Path.resolve(__dirname, '../../src/scss/index.scss'),
   },
   output: {
     library: 'mdb',
     libraryTarget: 'umd',
     globalObject: 'this',
     umdNamedDefine: true,
-    path: Path.join(__dirname, '../dist'),
+    path: Path.join(__dirname, '../../dist'),
     filename: '[name].min.js',
   },
   plugins: [
-    new Webpack.ProvidePlugin({
-      'mdb': 'mdb',
-    }),
     new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, '../src/index.html') },
-      { from: Path.resolve(__dirname, '../src/img'), to: 'img' },
+      { from: Path.resolve(__dirname, '../../src/mdb/index.html') },
+      { from: Path.resolve(__dirname, '../../src/img'), to: 'img' },
     ]),
     new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
@@ -32,8 +28,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '~': Path.resolve(__dirname, '../src'),
-      'mdb': Path.join(__dirname, '../node_modules/mdb-ui-kit'),
+      '~': Path.resolve(__dirname, '../../src'),
+      'mdb': Path.join(__dirname, '../../node_modules/mdb-ui-kit'),
     },
   },
   module: {
