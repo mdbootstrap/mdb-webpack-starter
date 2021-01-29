@@ -15,15 +15,7 @@
 
 ___
 
-<div class="panel panel-warning">
-**Warning**
-{: .panel-heading}
-<div class="panel-body">
-
-The use of this Starter is at your own risk and assumes basic knowledge of Webpack, JavaScript and CSS preprocessors. We recommend creating custom versions of MDB UI KIT and themes only for advanced developers.
-
-</div>
-</div>
+> :warning: The use of this Starter is at your own risk and assumes basic knowledge of Webpack, JavaScript and CSS preprocessors. We recommend creating custom versions of MDB UI KIT and themes only for advanced developers.
 
 ___
 
@@ -135,6 +127,7 @@ export { Carousel };
 ```
 
 > **Pro Advanced paths**
+>
 > For the Pro Advanced package the __/mdb__ folder will contain two subfolders: __/mdb__ and __/plugins__, so for our needs the paths to the scss and js files will have to contain duplicated __mdb/__ text. Here's an example for a carousel component: 
 > ```
 > import Carousel from '../../mdb/mdb/js/free/carousel';
