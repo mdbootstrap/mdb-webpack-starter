@@ -32,20 +32,14 @@ ___
 npm install
 ```
 
-<div class="panel panel-info">
-**Pro Essential / Pro Advanced installation**
-{: .panel-heading}
-<div class="panel-body">
-
-```
-npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
-```
-or 
-```
-npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
-```
-</div>
-</div>
+> **Pro Essential / Pro Advanced installation**
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+> ```
+> or 
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+> ```
 
 ### Dev Server
 ```
@@ -122,11 +116,11 @@ npm install
 <div class="panel-body">
 
 ```
-npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
 ```
 or 
 ```
-npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
 ```
 
 </div>
@@ -199,7 +193,7 @@ npm run buildMDB
 
 ___
 
-# CUSTOM SKIN
+# CUSTOM THEME
 Webpack Starter allows pro users to prepare a personalized theme for all UI KIT components. 
 
 ### Installation
@@ -208,7 +202,11 @@ npm install
 ```
 
 ```
-npm i git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+```
+or 
+```
+npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
 ```
 
 ### SCSS config
