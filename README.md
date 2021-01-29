@@ -32,11 +32,12 @@ ___
 npm install
 ```
 
-> **Pro Essential / Pro Advanced installation**
+> **Pro Essential installation**
 > ```
 > npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
 > ```
-> or 
+
+> **Pro Advanced installation**
 > ```
 > npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
 > ```
@@ -110,21 +111,15 @@ It is possible to prepare a custom version of MDB UI KIT. It can be useful when 
 npm install
 ```
 
-<div class="panel panel-info">
-**Pro Essential / Pro Advanced installation**
-{: .panel-heading}
-<div class="panel-body">
+> **Pro Essential installation**
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
+> ```
 
-```
-npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-essential
-```
-or 
-```
-npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
-```
-
-</div>
-</div>
+> **Pro Advanced installation**
+> ```
+> npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced
+> ```
 
 ```
 npm run getMDBsrc
@@ -139,18 +134,11 @@ import Carousel from '../../mdb/js/free/carousel';
 export { Carousel };
 ```
 
-<div class="panel panel-info">
-**Pro Advanced paths**
-{: .panel-heading}
-<div class="panel-body">
-
-For the Pro Advanced package the __/mdb__ folder will contain two subfolders: __/mdb__ and __/plugins__, so for our needs the paths to the scss and js files will have to contain duplicated __mdb/__ text. Here's an example for a carousel component: 
-
-```
-import Carousel from '../../mdb/mdb/js/free/carousel'.
-```
-</div>
-</div>
+> **Pro Advanced paths**
+> For the Pro Advanced package the __/mdb__ folder will contain two subfolders: __/mdb__ and __/plugins__, so for our needs the paths to the scss and js files will have to contain duplicated __mdb/__ text. Here's an example for a carousel component: 
+> ```
+> import Carousel from '../../mdb/mdb/js/free/carousel';
+> ```
 
 Some components may require additional dependencies to be installed. Webpack should report this after starting a devServer.
 
@@ -165,17 +153,11 @@ Example path for carousel file:
 @import '../../mdb/scss/free/carousel';
 ```
 
-<div class="panel panel-info">
-**Pro Advanced paths**
-{: .panel-heading}
-<div class="panel-body">
-
-```
-(...)
-@import '../../mdb/mdb/scss/free/carousel';
-```
-</div>
-</div>
+> **Pro Advanced path**
+> ```
+> (...)
+> @import '../../mdb/mdb/scss/free/carousel';
+> ```
 
 ### Configuration
 Webpack config for MDB development is located in /webpack/mdb/ directory and index.html file is placed in /src/mdb/ directory.
