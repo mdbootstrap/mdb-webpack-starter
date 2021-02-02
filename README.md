@@ -142,13 +142,11 @@ Keep in mind that many scss files are related to each other. For example, a moda
 
 Example path for carousel file:
 ```
-(...)
 @import '../../mdb/scss/free/carousel';
 ```
 
 > **Pro Advanced path**
 > ```
-> (...)
 > @import '../../mdb/mdb/scss/free/carousel';
 > ```
 
