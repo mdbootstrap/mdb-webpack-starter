@@ -274,7 +274,15 @@
     "selector-max-specificity": null,
     "selector-max-type": 4,
     "selector-max-universal": 1,
-    "selector-no-qualifying-type": [true, {"ignore": ["attribute", "class"]}],
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": [
+          "attribute",
+          "class"
+        ]
+      }
+    ],
     "selector-pseudo-element-colon-notation": null,
     "string-quotes": "double",
     "value-keyword-case": "lower",
