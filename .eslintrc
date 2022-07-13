@@ -11,7 +11,7 @@
   "globals": {
     "mdb": true
   },
-  "ignorePatterns": ["src/js/bootstrap/", "src/js/bootstrap-mdb-prefix/", "dev/", "src/projects/mdb-com", "src/js/pro/timepicker", "src/files/"],
+  "ignorePatterns": ["src/js/bootstrap/", "src/js/bootstrap-mdb-prefix/", "dev/", "src/projects/mdb-com", "src/js/pro/timepicker", "src/files/", "mdb/"],
   "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 8,
